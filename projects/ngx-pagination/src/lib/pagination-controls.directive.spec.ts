@@ -12,9 +12,9 @@ describe('PaginationControlsDirective:', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [PaginationControlsDirective, DirectiveTestComponent, PaginatePipe, BoundsCorrectionTestComponent],
-            providers: [PaginationService],
-        });
+    declarations: [PaginationControlsDirective, DirectiveTestComponent, PaginatePipe, BoundsCorrectionTestComponent],
+    providers: [PaginationService],
+});
     });
 
     it('should warn on interaction when an unknown id is used', fakeAsync(() => {
@@ -264,6 +264,9 @@ describe('PaginationControlsDirective:', () => {
 /**
  * Test Component for testing the default controls component
  */
+/**
+ * Test Component for testing the default controls component
+ */
 @Component({
     template: `
     <ul>
@@ -286,7 +289,8 @@ describe('PaginationControlsDirective:', () => {
                 <span *ngIf="!p.isLastPage()" (click)="p.next()">forward</span>
             </div>
         </div>
-    </pagination-template>`
+    </pagination-template>`,
+    standalone: false
 })
 export class DirectiveTestComponent {
     maxSize: number = 9;
@@ -308,6 +312,9 @@ export class DirectiveTestComponent {
 /**
  * Test Component for testing bounds correction logic
  */
+/**
+ * Test Component for testing bounds correction logic
+ */
 @Component({
     template: `
         <ul>
@@ -322,7 +329,8 @@ export class DirectiveTestComponent {
                     <span (click)="p.setCurrent(page.value)">{{ page.label }}</span>
                 </div>
             </div>
-        </pagination-template>`
+        </pagination-template>`,
+    standalone: false
 })
 export class BoundsCorrectionTestComponent {
     collection: string[] = [];
