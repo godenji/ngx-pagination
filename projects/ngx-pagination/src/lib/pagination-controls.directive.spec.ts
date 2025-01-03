@@ -309,9 +309,6 @@ export class DirectiveTestComponent {
 /**
  * Test Component for testing bounds correction logic
  */
-/**
- * Test Component for testing bounds correction logic
- */
 @Component({
     template: `
         <ul>
