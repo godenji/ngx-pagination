@@ -264,9 +264,6 @@ describe('PaginationControlsDirective:', () => {
 /**
  * Test Component for testing the default controls component
  */
-/**
- * Test Component for testing the default controls component
- */
 @Component({
     template: `
     <ul>
